@@ -2,13 +2,12 @@ alert("Hello! Please enter two numbers.");
 
 
 let a = Number(prompt("Please enter first number:"));
-let b = Number(prompt("Please enter second number"));
-
-let operator = prompt("Please select operation:\n + \n - \n * \n /");
-let operation;
+let b = Number(prompt("Please enter second number")); 
+let operator; 
+let operation; 
 let result;
-
-
+do {
+    operator = prompt("Please select operation:\n + \n - \n * \n /");
 
 
 switch(operator) {
@@ -45,6 +44,7 @@ switch(operator) {
         break;
 }
 
+} while (operator !== "+" && operator !== "-" &&  operator !== "*" &&  operator !== "/")
 
 
 alert(`You inputted:\n ${a} as the first number,\n ${b} as the second number,\n and ${operation} for the operation.\n\n The result is ${result}.`);
